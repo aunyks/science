@@ -6,11 +6,7 @@
             html, body {
                 width: 100%;
                 height: 100%;
-                background: #FF9900;
-                background: -webkit-linear-gradient(left top, #D18282, #FF9900);
-                background: -o-linear-gradient(bottom right, #D18282, #FF9900);
-                background: -moz-linear-gradient(bottom right, #D18282, #FF9900);
-                background: linear-gradient(to bottom right, #D18282, #FF9900);
+                background: #D18282;
             }
 
             .invisible {
@@ -60,6 +56,20 @@
                 font-size: 2em;
                 margin: 0 5px 0 5px;
                 color: white;
+            }
+
+            .proj-description {
+                padding-left: 2ch;
+            }
+
+            li > a {
+                font-style: italic;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+
+            #content-container > p {
+                margin-bottom: 10px;
             }
         </style>
     </head>
@@ -117,8 +127,20 @@
                     <p>When I have free time, I like to use code to research and simulate what I read or inquire.</p>
                     <ul>
                         <li>- <a href="https://github.com/aunyks/quandary">Quandary</a></li>
+                        <p class="proj-description">
+                            A file encryption tool.
+                            Quandary is a GoLang command line tool that uses PBKDF2 to derive a key to be used for symmetric encryption via AES and file integrity assurance via HMAC. The resulting ciphertext of the encrypted file is stored in a new, user-specified file with the hash of the ciphertext and the salt used to derive the key.
+                        </p>
                         <li>- <a href="https://github.com/aunyks/create-btc-wallet">Create Bitcon Wallet</a></li>
+                        <p class="proj-description">
+                            A tiny Bitcoin wallet generator.
+                            Create-BTC-Wallet is a GoLang command line tool that implements the Bitcoin protocol's <a href="https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses">standard of wallet generation</a>. Because there doesn't yet exist a native GoLang implementation of the secp256k1 elliptic curve, however, Create-BTC-Wallet's generated addresses are not compliant with the Bitcoin protocol and will not work in practical settings. To suppress this fact, generated addresses are redacted and not shown to the user; private keys are still shown, since they still follow the Bitcoin protocol's Wallet Import Format and can be used practically.
+                        </p>
                         <li>- <a href="https://github.com/aunyks/newton-api">Newton</a></li>
+                        <p class="proj-description">
+                            A microservice for symbolic math computation.
+                            Newton is a Node.js RESTful API that can perform symbolic operations on expressions provided via its endpoints. The API uses an Abstract Tree representation of the given expressions to perform computationally difficult operations such as differentiation and integration, along with high order operations that employ the two aforementioned operations.
+                        </p>
                     </ul>
                 </div>
                 <div class="column"></div>
